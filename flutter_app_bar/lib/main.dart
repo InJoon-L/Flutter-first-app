@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
       title: 'Appbar',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.red
+        primarySwatch: Colors.red,
       ),
       home: MyPage(),
     );
@@ -105,6 +105,29 @@ class MyPage extends StatelessWidget {
           ],
         ),
       ),
+      body: Builder(
+        builder: (BuildContext ctx) {
+          return Center(
+            child: TextButton(
+              child: Text('Show me',
+                style: TextStyle(
+                  color: Colors.white
+                ),
+              ),
+              style: TextButton.styleFrom(
+                backgroundColor: Colors.red,
+              ),
+              onPressed: () { 
+                ScaffoldMessenger.of(ctx).showSnackBar(
+                  SnackBar(
+                    content: Text('A SnackBar has been shown.'))
+                );
+              },
+            ),
+          );
+        },
+      )
     );
+    
   }
 }
