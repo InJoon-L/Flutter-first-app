@@ -106,12 +106,26 @@ class MyPage extends StatelessWidget {
           ],
         ),
       ),
-      body: Column(
-        children: <Widget>[
-          MySnackBar(),
-          MyToast(),
-        ],
+      backgroundColor: Colors.blue,
+      body: SafeArea(
+        child: Container(
+          color: Colors.red,
+          width: 100.0,
+          height: 100.0,
+          margin: EdgeInsets.symmetric(
+            vertical: 50.0,
+            horizontal: 10.0
+          ),
+          padding: EdgeInsets.all(20.0),
+          child: Text('Hello'),
+        ),
       ),
+      // body: Column(
+      //   children: <Widget>[
+      //     MySnackBar(),
+      //     MyToast(),
+      //   ],
+      // ),
     );
   }
 }
