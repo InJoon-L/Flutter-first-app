@@ -106,19 +106,43 @@ class MyPage extends StatelessWidget {
           ],
         ),
       ),
-      backgroundColor: Colors.blue,
+      backgroundColor: Colors.teal,
       body: SafeArea(
-        child: Container(
-          color: Colors.red,
-          width: 100.0,
-          height: 100.0,
-          margin: EdgeInsets.symmetric(
-            vertical: 50.0,
-            horizontal: 10.0
+        child: Center(
+          child: Row(
+            // mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            // mainAxisSize: MainAxisSize.min, // 세로 축 길이를 자식들 길이만큼만
+
+            children: <Widget>[
+              Container(
+                height: 100.0,
+                color: Colors.white,
+                child: Text('Container 1'),
+              ),
+              SizedBox(
+                width: 30.0,
+              ),
+              Container(
+                height: 100.0,
+                color: Colors.blue,
+                child: Text('Container 2'),
+              ),
+              SizedBox(
+                width: 30.0,
+              ),
+              Container(
+                height: 100.0,
+                color: Colors.red,
+                child: Text('Container 3'),
+              ),
+              // Container(
+              //   width: double.infinity, // 오른쪽 끝 정렬
+              //   height: 20.0,
+              // )
+            ],          
           ),
-          padding: EdgeInsets.all(20.0),
-          child: Text('Hello'),
-        ),
+        )
       ),
       // body: Column(
       //   children: <Widget>[
