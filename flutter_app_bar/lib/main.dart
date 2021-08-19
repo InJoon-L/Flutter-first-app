@@ -167,27 +167,3 @@ void flutterToast() {
     toastLength: Toast.LENGTH_SHORT,
   );
 }
-
-
-// Builder(
-//         builder: (BuildContext ctx) {
-//           return Center(
-//             child: TextButton(
-//               child: Text('Show me',
-//                 style: TextStyle(
-//                   color: Colors.white
-//                 ),
-//               ),
-//               style: TextButton.styleFrom(
-//                 backgroundColor: Colors.red,
-//               ),
-//               onPressed: () { 
-//                 ScaffoldMessenger.of(ctx).showSnackBar(
-//                   SnackBar(
-//                     content: Text('A SnackBar has been shown.'))
-//                 );
-//               },
-//             ),
-//           );
-//         },
-//       )
