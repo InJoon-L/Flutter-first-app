@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'ScreenA.dart';
 import 'ScreenB.dart';
 import 'ScreenC.dart';
-
+import 'SecondPage.dart';
 
 void main() => runApp(MyApp());
 
@@ -19,6 +19,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => ScreenA(),
         '/b': (context) => ScreenB(),
         '/c': (context) => ScreenC(),
+        '/s': (context) => SecondPage(),
       },
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_navigator/ScreenC.dart';
 
 class ScreenA extends StatelessWidget {
   const ScreenA({ Key? key }) : super(key: key);
@@ -31,8 +32,37 @@ class ScreenA extends StatelessWidget {
                 primary: Colors.amber
               ),
             ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamed(context, '/s');
+              },
+              child: Text('Go to SecondPage'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.amber
+              ),
+            ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.thumb_up),
+        onPressed: () {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Like a new Snack bar!'),
+              duration: Duration(seconds: 3),
+              action: SnackBarAction(
+                label: 'Undo',
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => ScreenC())
+                  );
+                },
+              ),
+            ),
+          );
+        },
       ),
     );
   }
