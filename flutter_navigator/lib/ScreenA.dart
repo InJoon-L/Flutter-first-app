@@ -41,6 +41,15 @@ class ScreenA extends StatelessWidget {
                 primary: Colors.amber
               ),
             ),
+            ElevatedButton(
+              onPressed: (){
+                Navigator.pushNamed(context, '/h');
+              },
+              child: Text('Go to HotPage'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.amber
+              ),
+            ),
           ],
         ),
       ),

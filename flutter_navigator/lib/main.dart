@@ -3,6 +3,8 @@ import 'ScreenA.dart';
 import 'ScreenB.dart';
 import 'ScreenC.dart';
 import 'SecondPage.dart';
+import 'HotPage.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/b': (context) => ScreenB(),
         '/c': (context) => ScreenC(),
         '/s': (context) => SecondPage(),
+        '/h': (context) => HotPage(),
       },
     );
   }
